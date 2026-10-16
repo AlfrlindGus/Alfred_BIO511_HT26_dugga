@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from plotnine import ggplot, aes, geom_point, ggtitle
-
+import random
+#Q1
 
 name = 'Alfred'
 letter ='A'
@@ -15,7 +16,7 @@ for x in range(len(name)): #loop turns x into each letter in the name
         lettercount += 1
 print(str(lettercount) + str(letter))
 
-
+#Q2
 
 my_list = [1, 5, "4", "six", 3.14]
 
@@ -40,7 +41,7 @@ def sum_list(list_input):
     previousn = None
     sum_list_fake = []
     for entry in the_list:
-        if not previousn == None: #prevents messing up the first time it runs
+        if not previousn == None: #prevents messing up the first time it runs. Otherwise we'd get an extra 1 in the output
             sum_entry = entry + previousn
             sum_list_fake.append(sum_entry)
         previousn = entry
@@ -49,8 +50,10 @@ def sum_list(list_input):
 sum_list_real = sum_list(new_list_function)
 print(sum_list_real)
 
+#Q3
+
 source_file = 'cnv_data.csv'
-file_path_name = 'chromosome_1.png' #I'm just saving it in the same dir
+file_path_name = 'chromosome_1.png' #I'm just saving it in the same dir but you could specify a path
 #read file into pandas dataframe
 df = pd.read_csv(source_file)
 
@@ -62,3 +65,19 @@ plot = (
 )
 plot.show()
 plot.save(file_path_name, width=4, height=3,dpi=300) 
+
+
+
+#Q4
+#for range 1-20, Bob is random.randint(1,6) and Alice is random.randint(1,6) if Bob > Alice, add Bob to dict, if Alice < Bob, add Alice, else add draw.
+
+record = {
+'Bob': [],
+'Alice' : [],
+'Draw' : []
+}
+
+
+for match in range
+
+                   
